@@ -21,10 +21,7 @@ services:
 
   server:
     # cpuset: "0-4"
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile.dev
-      target: prod
+    image: kelpancioni/sigma:latest
     restart: unless-stopped
     env_file:
       - '.env'
